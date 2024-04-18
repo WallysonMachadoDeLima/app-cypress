@@ -1,0 +1,22 @@
+{
+  "name": "fila-de-espera-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "v20.9.0"
+  },
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run --browser electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.7.2",
+    "faker": "^6.6.6",
+    "faker-br": "^0.4.1"
+  }
+}
