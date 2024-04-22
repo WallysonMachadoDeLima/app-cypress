@@ -58,8 +58,6 @@ describe('Cadastro de Agendamento', () => {
       cy.visit('https://fila-de-espera-app.dev.tcero.tc.br:8888/agendamento/agendar')
       cy.wait(500)
       cy.get('.h-24 > .flex > .text-lg').should('contain', 'Realizar Agendamento')
-
-      cy.log(responsavel.formats)
     })
   })
 
