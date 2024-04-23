@@ -1,12 +1,5 @@
-const invalido = {
-  cpf: '11111111111',
-  senha: 'abcd1234',
-}
-
-const credenciais = {
-  cpf: '12345678901',
-  senha: 'aleatorio',
-}
+import invalido from '../fixtures/invalido'
+import credencial from '../fixtures/credencial'
 
 describe('Login', () => {
   describe('Acessando a página "Login"', () => {
@@ -16,7 +9,7 @@ describe('Login', () => {
       cy.clearAllSessionStorage()
 
       cy.wait(500)
-      cy.visit('https://fila-de-espera-app.dev.tcero.tc.br:8888/')
+      cy.visit('')
       cy.wait(500)
       cy.get('#wt-cli-accept-all-btn').click();
       cy.wait(500)
@@ -39,8 +32,8 @@ describe('Login', () => {
 
     it('Realizando login com credenciais válidas', () => {
       cy.wait(500)
-      cy.get('#Username').clear().type(credenciais.cpf)
-      cy.get('#Password').clear().type(credenciais.senha)
+      cy.get('#Username').clear().type(credencial.cpf)
+      cy.get('#Password').clear().type(credencial.senha)
       cy.wait(500)
       cy.get('body > div.content > div.login-section > div > div.login-card > div.login-card-content > div.login-form > form > button').click()
       cy.wait(500)
