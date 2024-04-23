@@ -19,20 +19,18 @@ describe('Cadastro de Agendamento', () => {
     it('Extraindo o valor de "Município", "Local de atendimento", "Data" e "Horário" na guia "Local e horário"', () => {
       cy.wait(1000)
       cy.get('#\\:r7\\:-form-item > .text-start').then(($dom) => {
-        agendamento.municipio = $dom.text()
+        agendamento.municipio = $dom.text();
         cy.log($dom.text())
       })
       cy.get('#\\:rd\\:-form-item > .text-start').then(($dom) => {
-        agendamento.localAtendimento = $dom.text()
+        agendamento.localAtendimento = $dom.text();
         cy.log($dom.text())
       })
+      agendamento.data = 'data'
       cy.get('[style="min-width: 100%; display: table;"] > .px-4 > :nth-child(1)').then(($dom) => {
-        agendamento.horario = $dom.text()
+        agendamento.horario = $dom.text();
         cy.log($dom.text())
       })
-
-      // exporta o objeto agendamento novamente com os valores atualizados
-      cy.writeFile('../fixtures/agendamento.js', `let agendamento = ${JSON.stringify(agendamento, null, 2)};`);
     })
 
     it('Bloqueando passar para a próxima guia com campos não selecionados na guia "Local e horário"', () => {
@@ -109,7 +107,7 @@ describe('Cadastro de Agendamento', () => {
       cy.get('#radix-\\:rv\\: > div.flex.flex-col.space-y-1\\.5.text-center.sm\\:text-left > div').should('contain', 'Confirme os dados para continuar')
     })
   })
-  
+
   describe('Guia "Confirmação"', () => {
     it('Confirmando os dados na guia "Confirmação"', () => {
       cy.wait(500)
