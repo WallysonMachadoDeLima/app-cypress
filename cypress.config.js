@@ -2,6 +2,8 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   chromeWebSecurity: false,
+  viewportWidth: 1920,
+  viewportHeight: 1080,
   e2e: {
     setupNodeEvents(on, config) {
     },
