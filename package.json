@@ -18,5 +18,8 @@
     "cypress": "^13.7.2",
     "faker": "^5.5.3",
     "faker-br": "^0.4.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
