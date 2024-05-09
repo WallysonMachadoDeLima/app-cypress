@@ -1,6 +1,6 @@
-let credencial = {
+let credencialGestorCreche = {
     cpf: '11111111111',
     senha: 'abcd1234',
 }
 
-export default credencial
+export default credencialGestorCreche
