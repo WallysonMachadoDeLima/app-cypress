@@ -3,7 +3,8 @@ import './sections/secretaria/commands'
 Cypress.Commands.add('login', (username, password) => {
     cy.log('LIMPANDO: Dados de login')
     cy.clearAllCookies()
-    cy.clearAllLocalStorage()
+    cy.clearAllLocalStorage() 
+    
     cy.clearAllSessionStorage()
     cy.wait(500) 
 
